@@ -1,0 +1,165 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>home</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+	<nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top"style="background-color:whitesmoke">
+		<a class="navbar-brand" href="#">Gestion du risque de crédit</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse"
+		  aria-expanded="false" aria-label="Toggle navigation">
+		  <span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarCollapse">
+		  <ul class="navbar-nav mr-auto">
+	  
+			<li class="nav-item">
+			  <a class="nav-link" routerLink="/home">Acceuil</a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link" routerLink="/contact-list">Contacts</a>
+			</li>
+		   
+	  
+		  </ul>
+		</div>
+	  </nav>
+	<div class="center-div">
+		<div class= "col-sm-12 custom-container jumbotron">
+			
+		<form action="{{ url_for('predict')}}" method="POST">
+		  <form class="form-horizontal">
+		   <fieldset class="for">
+			  <h3 style="text-align: center; size: 40px;
+			  color: #62a3a7;font-family: serif; font-size: 46px;">Plateforme Gestion Risque Crédit </h3>
+			  <div class="form-group">  
+				<div class="col-6">  
+				<div class="fas fa-male fa-3x"></div>
+				<label for="select"name='Gender'>Genre</label>
+				  <select class="selec" id="select"name='Gender'type='number'formControlName='Gender'>
+					<option value='1'>Male</option>
+					<option value='0'>Femme</option>
+				  </select>
+			  </div>
+			 <div>
+			   </div>
+			   <div class="form-group">  
+				<div class="col-6">  
+			 <div class="fas fa-sort-numeric-up fa-3x"></div>
+			<label for="n1">Quel est votre âge ?</label>
+				<input class="selec" type="number" min="18" max="120" step="1" id="n1" name="age" type='number'formControlName="age"
+					   pattern="\d+">
+		</div> 
+		</div>
+		</div>
+	 
+		<div class="form-group">
+		  <div class="col-6"> 
+		<div class="fas fa-home fa-3x"></div>
+		  <label for="select"name='house'>Avez vous une maison?</label>
+				<select class="selec" id="select"name='house' type='number'formControlName="house">
+					<option value='1'>Oui</option>
+						<option value='0'>Non</option>
+						</select>
+				 </div> 
+				 </div>
+				 <div class="col-6"> 
+				  <div class="form-group">
+					<div class="fas fa-car fa-3x"></div>
+					<label for="select"name='car'formControlName="car">Avez vous une voiture?</label>
+					  <select class="selec" id="select"name='car' type='number'>
+						<option value='1'>Oui</option>
+						<option value='0'>Non</option>
+					  </select>
+				  <div>
+				  </div>
+				  </div>
+				 <div class="form-group">
+				  <div class="col-6"> 
+					<div class="fas fa-file-contract  fa-3x"></div>
+					  <label for="select"name='family_status'>État civil</label>
+						<select class="selec" id="select"name='family_status' type='number'formControlName="family_status">
+						  <option value='1'>Marié</option>
+						  <option value='0'>Célibataire</option>
+						</select>
+					<div>
+					</div>
+					
+				
+				  <div class="form-group">
+					<div class="col-6"> 
+				  <div class="fas fa-user-friends fa-3x"></div>
+				  <label >Combien les membres de votre famille ?</label>
+				  <input class="selec" type="number" min="1" max="120" step="1" name="fam_members" type="number"formControlName='fam_members'>
+				  </div>
+				  </div>
+			
+
+      <div class="col-6">
+        <div class="form-group">
+        <label>Est-ce que vous avez un travail ?</label>
+        <div class="custom-control custom-radio custom-control-inline">
+          <input type="radio" class="custom-control-input" id="cvalue1" formControlName="c" name="c"value="0" type='number'mdbInput>
+          <label class="custom-control-label" for="cvalue1">Non</label>
+        </div>
+       
+        <div class="custom-control custom-radio custom-control-inline">
+          <input type="radio" class="custom-control-input" id="cvalue2" formControlName="c" name="c"value="1" type='number'mdbInput>
+          <label class="custom-control-label" for="cvalue2">Oui</label>
+        </div>
+        </div>
+        </div>
+	  <div class="form-group">
+		<div class="col-6">   
+		<div class="fas fa-euro-sign fa-3x"></div>
+					  <label>Si vous travaillez, Combien votre revenu annuel ?</label>
+					  <input class="selec" type="number" min="1" max="100000000000000" step="1" name="annual_income" type="number"
+					  formControlName='annual_income'>
+						   </div>
+						   </div>
+						   <div class="form-group">
+							<div class="col-6">   
+							  <div class="far fa-calendar-alt fa-3x"></div>
+							
+										  <label>Durée</label>
+										  <input class="selec" type="number" min="1" max="100000000000000" step="1" name="employement" type="number"formControlName='employement'>
+											   </div>
+											   </div>
+					   
+	
+						<div class="container">
+						<div class="row">
+					   <div class="col text-center">
+
+					  <div class='center'>
+						<input type="submit" class="btn-info" value="Submit">
+
+						</div>
+					
+
+				  </div>
+				 </div>
+				 </div> 
+		
+		   
+		
+	
+	  </div>
+	  <footer>
+		<div class="center-div">
+		<p  class="text-xs-center">© Copyright 2020. All rights reserved.</p>
+		</div>
+	  </footer>
+	
+	 

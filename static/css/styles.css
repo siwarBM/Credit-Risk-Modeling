@@ -1,0 +1,87 @@
+
+.selec{
+    margin-left: 30px;
+    margin-top: 30px;
+    width:200px;
+    height:30px;
+  
+  }
+
+  .h3 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 50px;
+    color:#fae52c;
+}
+  .form-group{
+    margin-top: 30px;
+  
+  }
+  .for{
+   
+    background-color: #c4c9c7;
+  
+  }
+
+ 
+  .btn.btn-primary{
+    border-radius: 20px;
+    font-family: "Snell Roundhand";
+    font-size: 30px;
+    line-height: 30px;
+    color: #5c5e11;
+    text-align: center;
+    height: 50px;
+    width: 150px;
+    margin-bottom: 8px;
+    background-color: #fae52c;
+    margin-left: 600px;
+    }
+    label{
+        font-family: fantasy;
+        margin-left: 20px;
+    }
+    .fa-7x {
+      margin-left: 560px;
+      margin-top: 46px;
+      font-size: 7em;
+  }
+    .selec {
+        margin-left: 45px;
+        margin-top: 30px;
+        width: 1200px;
+        height: 40px;
+    }
+    .btn-info {
+      background-color:#62a3a7 ;
+      height:50px;
+      margin-left: 599px;
+      width:120px;
+      border-radius: 1.25rem;
+        font-family: "Snell Roundhand";
+        font-size: 30px;
+        line-height: 30px;
+        color: #5c5e11;
+        text-align: center;
+     
+    }
+
+.center-div
+{
+  margin: 0 auto;
+  border-radius: 3px;
+}
+.form-groupp{
+    text-align: center;
+    padding-top: 40px;
+  
+  
+  }
+  .head{
+    text-align: center;
+  }
+ 
+ 
+  
+
+
+  
